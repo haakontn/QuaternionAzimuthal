@@ -33,8 +33,10 @@ See *example.py* for a demonstration on how to use `filter_signal` and `quaterni
 - Note there is an upper limit to the mode order based on the number of azimuthal measurement locations. There is currently no check implemented for this, so care should be taken by the user.
 
 ## References
-Source of the method:
+**Source of the method:**
+
 [G. Ghirardo and M. R. Bothien, "Quaternion structure of azimuthal instabilities", Physical Review Fluids, 2018](https://www.researchgate.net/publication/327755288_Quaternion_structure_of_azimuthal_instabilities "ResearchGate")
 
-Papers where this implementation have been used:
+**Papers where this implementation have been used:**
+
 [G. Ghirardo, H. T. Nygård, A. Cuquel, and N. A. Worth "Symmetry breaking modelling for azimuthal combustion dynamics", Proceedings of the Combustion Institute, 2020](https://www.sciencedirect.com/science/article/pii/S1540748920300183 "Elsevier ScienceDirect  (Open access)")
