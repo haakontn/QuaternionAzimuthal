@@ -29,5 +29,12 @@ See *example.py* for a demonstration on how to use `filter_signal` and `quaterni
 
 ## Notes
 - The analytical signal is obtained from the Hilbert transform. Hilbert transforms usually have some end effects, and it can be a good idea to remove the start and end of the returned time series depending on how severe these effects are. See the example in *example.py* for an example of how it might look like. It might also trigger a warning that a few points in the reconstruction is not matching in special circumstances.
-- The orientation angles `theta_0` and `theta_0 + np.pi` are completely equivalent. Therefore, it is always possible to add or subtract `np.pi` from this quantity.
+- The orientation angles `ntheta_0` and `ntheta_0 + np.pi` are completely equivalent. Therefore, it is always possible to add or subtract `np.pi` from this quantity.
 - Note there is an upper limit to the mode order based on the number of azimuthal measurement locations. There is currently no check implemented for this, so care should be taken by the user.
+
+## References
+Source of the method:
+[G. Ghirardo and M. R. Bothien, "Quaternion structure of azimuthal instabilities", Physical Review Fluids, 2018](https://www.researchgate.net/publication/327755288_Quaternion_structure_of_azimuthal_instabilities "ResearchGate")
+
+Papers where this implementation have been used:
+[G. Ghirardo, H. T. Nygård, A. Cuquel, and N. A. Worth "Symmetry breaking modelling for azimuthal combustion dynamics", Proceedings of the Combustion Institute, 2020](https://www.sciencedirect.com/science/article/pii/S1540748920300183 "Elsevier ScienceDirect  (Open access)")
