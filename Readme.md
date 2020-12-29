@@ -1,4 +1,4 @@
-# Quaternion structure of azimuthal modes
+# Quaternion structure of azimuthal instabilities
 
 Implementation of how to obtain the quaternion parameters defined by [Ghirardo and Bothien](https://www.researchgate.net/publication/327755288_Quaternion_structure_of_azimuthal_instabilities "ResearchGate") from pressure time series at discrete points on the annular geometry.
 
@@ -16,7 +16,7 @@ from quatazim import quaternion_mode, filter_signal
 
 quaternion_parameters = quaternion_mode(angles, pressures, n)
 ``` 
-`quaternion_parameters` is a `OrderedDict` with the following elements
+`quaternion_parameters` is an `OrderedDict` with the following elements
 | Key       | Description                                                                   |
 |-----------|-------------------------------------------------------------------------------|
 | amplitude | Amplitude of the azimuthal mode                                               |
@@ -28,7 +28,7 @@ quaternion_parameters = quaternion_mode(angles, pressures, n)
 See *example.py* for a demonstration on how to use `filter_signal` and `quaternion_mode` on a synthetic time series.
 
 ## Notes
-- The analytical signal is obtained from the Hilbert transform. Hilbert transforms usually have some end effects, and it can be a good idea to remove the start and end of the returned time series depending on how severe these effects are. See the example in *example.py* for an example of how it might look like. It might also trigger a warning that a few points in the reconstruction is not matching in special circumstances.
+- The analytical signal is obtained from the Hilbert transform. Hilbert transforms usually have some end effects, and it can be a good idea to remove the start and end of the returned time series depending on how severe these effects are. See *example.py* for an example of how it might look like. It might also trigger a warning that a few points in the reconstruction is not matching in certain circumstances.
 - The orientation angles `ntheta_0` and `ntheta_0 + np.pi` are completely equivalent. Therefore, it is always possible to add or subtract `np.pi` from this quantity.
 - Note there is an upper limit to the mode order based on the number of azimuthal measurement locations. There is currently no check implemented for this, so care should be taken by the user.
 
@@ -37,6 +37,6 @@ See *example.py* for a demonstration on how to use `filter_signal` and `quaterni
 
 [G. Ghirardo and M. R. Bothien, "Quaternion structure of azimuthal instabilities", Physical Review Fluids, 2018](https://www.researchgate.net/publication/327755288_Quaternion_structure_of_azimuthal_instabilities "ResearchGate")
 
-**Papers where this implementation have been used:**
+**Papers where this implementation has been used:**
 
 [G. Ghirardo, H. T. Nygård, A. Cuquel, and N. A. Worth "Symmetry breaking modelling for azimuthal combustion dynamics", Proceedings of the Combustion Institute, 2020](https://www.sciencedirect.com/science/article/pii/S1540748920300183 "Elsevier ScienceDirect  (Open access)")

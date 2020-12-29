@@ -27,7 +27,7 @@ omega = 2 * np.pi * freq
 # Set up the parameters
 A = np.ones_like(time) + 0.3 * np.sin(3 * time) * np.exp(-time/4)
 # Make the nature angle slowly varying
-# Note this should be pi/4 or below to make physical sense
+# Note this should have magnitude of pi/4 or less to make physical sense
 chi = 0.9 * np.pi / 4 * np.sin(1.5 * time)
 # Create a linear drift in the orientation angle
 # for half of the runtime

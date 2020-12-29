@@ -3,7 +3,7 @@ import warnings
 
 import numpy as np
 import scipy.signal
-from scipy.fftpack import next_fast_len
+from scipy.fft import next_fast_len
 
 
 def get_analytical_signal(sig, axis=-1):
